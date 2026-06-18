@@ -12,7 +12,7 @@ load_dotenv()   # loads .env into os.environ if present
 
 # ── Distance / methodology ─────────────────────────────────────────────────────
 BUFFER_METERS   = 800     # 800m ≈ 10-minute walk at 80 m/min; change to test sensitivity
-WALK_SPEED_KPH  = 4.8     # used for OSMnx network analysis (Section 5, not yet active)
+WALK_SPEED_KPH  = 4.8     # used for OSMnx network analysis (not yet active)
 WALK_MINUTES    = 10      # used for OSMnx network analysis
 
 # ── Coordinate reference systems ───────────────────────────────────────────────
@@ -45,20 +45,40 @@ CENSUS_REPORTER_URL = 'https://api.censusreporter.org/1.0/data/show/latest?table
 # Set to 'Year Round' → exclude winter-storage stations for a conservative estimate
 BLUEBIKES_SEASONAL_FILTER = None   # options: None | 'Year Round'
 
-# ── Data source file paths ─────────────────────────────────────────────────────
-BTS_EXCEL       = 'data/raw/Locations_of_Docked_Bikeshare_Stations_by_System_and_Year_20260617.xlsx'
-BLUEBIKES_EXCEL = 'data/raw/-External-_Bluebikes_Station_List_05.19.26.xlsx'
+# ── Data source ────────────────────────────────────────────────────────────────
+# All station data now lives in one master Excel file, one tab per system.
+MASTER_EXCEL = 'data/raw/Master Bikeshare Station Data.xlsx'
+
+# ── System colors (brand hex codes) — edit here to update the map instantly ───
+# Each key maps to a bikeshare system; value is the hex color for its dots and buffer.
+SYSTEM_COLORS = {
+    'bluebikes':      '#1B6FE4',  # BlueBikes blue
+    'valleybike':     '#F7941D',  # ValleyBike orange
+    'port_bikeshare': '#00BCD4',  # Port Bikeshare teal
+    'metromobility':  '#9C27B0',  # MetroMobility purple
+    'minuteman':      '#E53935',  # Minuteman Bikeshare red
+}
+
+# ── System display labels ──────────────────────────────────────────────────────
+SYSTEM_LABELS = {
+    'bluebikes':      'BlueBikes',
+    'valleybike':     'ValleyBike',
+    'port_bikeshare': 'Port Bikeshare',
+    'metromobility':  'MetroMobility',
+    'minuteman':      'Minuteman Bikeshare',
+}
 
 # ── Processed data cache paths ─────────────────────────────────────────────────
 # These files are written on first run and re-used on subsequent runs.
 # Delete them to force a refresh from source (e.g. after updating raw data).
-CACHE_BLOCK_GROUPS  = 'data/processed/ma_block_groups.geojson'
-CACHE_STATIONS      = 'data/processed/stations_combined.geojson'
-CACHE_BUFFER        = 'data/processed/coverage_buffer.geojson'
-CACHE_BG_COVERAGE   = 'data/processed/block_groups_with_coverage.geojson'
+CACHE_BLOCK_GROUPS      = 'data/processed/ma_block_groups.geojson'
+CACHE_STATIONS          = 'data/processed/stations_combined.geojson'
+CACHE_BUFFER            = 'data/processed/coverage_buffer.geojson'
+CACHE_BG_COVERAGE       = 'data/processed/block_groups_with_coverage.geojson'
+CACHE_MULTI_BUFFER      = 'data/processed/multi_buffer_coverage.json'
 
-# ── Output paths ──────────────────────────────────────────────────────────────
+# ── Output paths ───────────────────────────────────────────────────────────────
 OUT_MAP_HTML    = 'data/processed/bikeshare_coverage_map.html'
 
 # ── KeplerGL map display settings ─────────────────────────────────────────────
-KEPLER_HEIGHT   = 700
+KEPLER_HEIGHT   = 900

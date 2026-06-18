@@ -1,0 +1,52 @@
+{
+  "1": {
+    "pct": 1.3,
+    "covered_pop": 92841,
+    "area_km2": 13.3
+  },
+  "2": {
+    "pct": 4.6,
+    "covered_pop": 326821,
+    "area_km2": 48.5
+  },
+  "3": {
+    "pct": 8.5,
+    "covered_pop": 600555,
+    "area_km2": 94.5
+  },
+  "4": {
+    "pct": 11.9,
+    "covered_pop": 839883,
+    "area_km2": 141.6
+  },
+  "5": {
+    "pct": 14.5,
+    "covered_pop": 1022787,
+    "area_km2": 185.2
+  },
+  "6": {
+    "pct": 16.4,
+    "covered_pop": 1152583,
+    "area_km2": 223.6
+  },
+  "7": {
+    "pct": 17.7,
+    "covered_pop": 1245790,
+    "area_km2": 257.4
+  },
+  "8": {
+    "pct": 18.7,
+    "covered_pop": 1318343,
+    "area_km2": 287.9
+  },
+  "9": {
+    "pct": 19.6,
+    "covered_pop": 1379590,
+    "area_km2": 316.8
+  },
+  "10": {
+    "pct": 20.4,
+    "covered_pop": 1434006,
+    "area_km2": 344.7
+  }
+}

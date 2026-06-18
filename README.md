@@ -1,24 +1,88 @@
 # MA Bikeshare Coverage Analysis
 
-Estimates the percentage of Massachusetts residents living within a 10-minute walk (~800m) of a docked bikeshare station, for inclusion in a Massachusetts DOT report.
+**How many Massachusetts residents live within a 10-minute walk of a docked bikeshare station?**
+
+This project answers that question for a Massachusetts DOT report. It maps all five docked bikeshare systems operating in MA, draws a walkable service area around each station, and estimates how many residents fall within it using Census population data.
+
+**[View the interactive map →](https://oouadani1.github.io/ma-bikeshare-coverage/data/processed/bikeshare_coverage_map.html)**
 
 ---
 
-## Data Sources
+## Key Finding
 
-- **BTS National Transit Database — Bikeshare Stations**: CSV of station-level data from the Bureau of Transportation Statistics. Covers most MA systems through 2022–2023, with gaps noted below.
-- **US Census TIGER/Line Shapefiles**: Block group geometries retrieved via the Census TIGER API.
-- **ACS 5-Year Estimates (Table B01003)**: Block group population counts from the American Community Survey.
-- **ValleyBike (manual)**: Current station list compiled manually; BTS data for ValleyBike is end-dated 2022 (system shutdown) and the reopened system under a new vendor is not yet in BTS.
-- **Port Bikeshare (manual)**: Not present in BTS dataset; stations compiled from operator sources.
-- **MetroMobility (manual)**: Not present in BTS dataset; stations compiled from operator sources.
+**About 20% of Massachusetts residents — roughly 1.4 million people — live within a 10-minute walk (~800m) of a docked bikeshare station.**
+
+---
+
+## Systems Mapped
+
+| System | Operator | Geography |
+|---|---|---|
+| BlueBikes | Motivate / Lyft | Greater Boston area, 13 municipalities |
+| ValleyBike | Pioneer Valley Planning Commission | Pioneer Valley (Springfield, Northampton, Amherst area) |
+| Port Bikeshare | Tandem Mobility | Newburyport |
+| MetroMobility | MetroMobility | Greater Boston (Somerville, Cambridge, Boston, Lawrence, Lowell, Worcester, and others) |
+| Minuteman Bikeshare | Minuteman Advisory Group | Concord / Acton area |
+
+---
+
+## How It Works
+
+1. **Station data** — Collected from each operator. All coordinates manually verified against operator maps and Google Street View. Stored in `data/raw/Master Bikeshare Station Data.xlsx`, one tab per system.
+
+2. **Service area** — We draw an 800-meter straight-line circle around each station (roughly a 10-minute walk at an average pace of 80 meters per minute). All circles are merged into one combined shape.
+
+3. **Population estimate** — We overlay the coverage shape with U.S. Census block group boundaries. For each block group, we calculate what share of its area falls inside the coverage shape, then apply that same share to its population count. This technique is called **areal interpolation** — it assumes people are spread roughly evenly within each block group, which is a reasonable approximation at this scale.
+
+4. **Population data** — 2022 American Community Survey 5-year estimates (Table B01003), pulled via the free Census Reporter API.
+
+---
+
+## What's on the Map
+
+- **Colored buffers** — Each system's combined coverage area, shaded in its brand color
+- **Station dots** — Individual station locations, colored by system
+- **Background layer** — Census block groups shaded by population density (people per km²)
+- **Info panel** — Summary stats, system legend, and a walking-distance sensitivity slider (1–10 minutes)
 
 ---
 
 ## Limitations
 
-- Euclidean (straight-line) 800m buffers are used as a proxy for a 10-minute walkshed. True pedestrian access areas require street-network routing (e.g., OSMnx isochrones) and would likely produce smaller, more accurate coverage polygons.
-- Station data for Port Bikeshare and MetroMobility is manually compiled and may be incomplete or out of date.
-- Areal interpolation assumes uniform population distribution within each Census block group, which introduces error in areas with uneven development patterns.
-- BlueBikes station data is taken as accurate; no independent verification of station status (active/inactive) was performed.
-- Analysis reflects a point-in-time snapshot and does not account for seasonal station removals or expansions.
+- **Straight-line distances overestimate real walkability.** An 800m radius assumes you can walk in a straight line to a station. In practice, streets, buildings, and other barriers make the actual walking route longer. A street-network walkshed analysis (using real route distances) would produce a smaller, more accurate coverage area. This is planned as a next step.
+
+- **ValleyBike data is pending an update.** The ValleyBike figures are based on 2025 hub data while we wait for a refreshed operator dataset. Some hubs are geofenced "drop zones" rather than traditional fixed docks; these are included in the count, which may slightly overstate docked-station coverage for the Pioneer Valley.
+
+- **Population is assumed to be evenly distributed within each block group.** This is a standard simplification used in spatial analysis. It introduces some error in areas with uneven development patterns (e.g., a dense downtown and a park in the same block group).
+
+- **This is a snapshot in time.** Station locations and counts change seasonally and as systems expand. The analysis reflects the station data and population estimates as of mid-2026.
+
+- **Walking speed assumption.** The 10-minute threshold assumes 80 meters per minute (~3 mph). Slower walkers, people with mobility limitations, or routes with hills would have smaller effective service areas.
+
+---
+
+## How to Update
+
+All tunable parameters live in `config.py`. To refresh any part of the analysis:
+
+| Goal | Action |
+|---|---|
+| Add or correct station data | Edit the relevant tab in `Master Bikeshare Station Data.xlsx`, delete `data/processed/stations_combined.geojson`, re-run |
+| Change walking distance threshold | Edit `BUFFER_METERS` in `config.py`, delete buffer caches, re-run |
+| Change a system's color on the map | Edit `SYSTEM_COLORS` in `config.py`, re-run Section 5 |
+| Update to newer Census data | Bump `ACS_YEAR` and `TIGER_URL` in `config.py`, delete block group caches, re-run |
+| Force full re-run | Delete all files in `data/processed/`, re-run the notebook |
+
+---
+
+## Files
+
+```
+config.py                          All parameters — the only file you need to edit
+analysis.ipynb                     Analysis notebook — runs from start to finish
+data/raw/
+  Master Bikeshare Station Data.xlsx   Station data, one tab per system
+data/processed/
+  bikeshare_coverage_map.html      Standalone interactive map (hosted on GitHub Pages)
+  results.json                     Machine-readable summary of key figures
+```
