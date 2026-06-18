@@ -55,8 +55,8 @@ SYSTEM_COLORS = {
     'bluebikes':      '#1B6FE4',  # BlueBikes blue
     'valleybike':     '#F7941D',  # ValleyBike orange
     'port_bikeshare': '#00BCD4',  # Port Bikeshare teal
-    'metromobility':  '#9C27B0',  # MetroMobility purple
-    'minuteman':      '#E53935',  # Minuteman Bikeshare red
+    'metromobility':  '#D32F2F',  # MetroMobility red
+    'minuteman':      '#003087',  # Minuteman Bikeshare navy blue
 }
 
 # ── System display labels ──────────────────────────────────────────────────────
