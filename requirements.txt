@@ -1,0 +1,9 @@
+geopandas
+python-dotenv
+shapely
+keplergl
+pandas
+requests
+census
+osmnx
+jupyter

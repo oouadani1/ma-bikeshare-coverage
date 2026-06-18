@@ -1,0 +1,15 @@
+{
+  "buffer_meters": 800,
+  "acs_year": 2022,
+  "total_stations": 683,
+  "station_counts": {
+    "bluebikes": 597,
+    "valleybike": 70,
+    "metromobility": 11,
+    "port_bikeshare": 5
+  },
+  "total_ma_population": 7044056.0,
+  "covered_population": 1408953.6360841421,
+  "coverage_pct": 20.00202207484072,
+  "coverage_area_km2": 333.34198748903106
+}
