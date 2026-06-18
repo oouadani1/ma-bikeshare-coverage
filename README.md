@@ -34,7 +34,7 @@ This project answers that question for a Massachusetts DOT report. It maps all f
 
 3. **Population estimate** — We overlay the coverage shape with U.S. Census block group boundaries. For each block group, we calculate what share of its area falls inside the coverage shape, then apply that same share to its population count. This technique is called **areal interpolation** — it assumes people are spread roughly evenly within each block group, which is a reasonable approximation at this scale.
 
-4. **Population data** — 2022 American Community Survey 5-year estimates (Table B01003), pulled via the free Census Reporter API.
+4. **Population data** — 2023 American Community Survey 5-year estimates (Table B01003), pulled via the free Census Reporter API.
 
 ---
 

@@ -1,6 +1,6 @@
 {
   "buffer_meters": 800,
-  "acs_year": 2022,
+  "acs_year": 2023,
   "total_stations": 695,
   "station_counts": {
     "bluebikes": 597,
@@ -10,58 +10,58 @@
     "minuteman": 4
   },
   "total_ma_population": 7044056.0,
-  "covered_population": 1434006.8931214302,
+  "covered_population": 1434088.307684123,
   "coverage_pct": 20.4,
   "coverage_area_km2": 344.7,
   "sensitivity_by_minute": {
     "1": {
       "pct": 1.3,
-      "covered_pop": 92841,
+      "covered_pop": 92911,
       "area_km2": 13.3
     },
     "2": {
       "pct": 4.6,
-      "covered_pop": 326821,
+      "covered_pop": 326858,
       "area_km2": 48.5
     },
     "3": {
       "pct": 8.5,
-      "covered_pop": 600555,
+      "covered_pop": 600580,
       "area_km2": 94.5
     },
     "4": {
       "pct": 11.9,
-      "covered_pop": 839883,
+      "covered_pop": 840010,
       "area_km2": 141.6
     },
     "5": {
       "pct": 14.5,
-      "covered_pop": 1022787,
+      "covered_pop": 1022902,
       "area_km2": 185.2
     },
     "6": {
       "pct": 16.4,
-      "covered_pop": 1152583,
+      "covered_pop": 1152669,
       "area_km2": 223.6
     },
     "7": {
       "pct": 17.7,
-      "covered_pop": 1245790,
+      "covered_pop": 1245892,
       "area_km2": 257.4
     },
     "8": {
       "pct": 18.7,
-      "covered_pop": 1318343,
+      "covered_pop": 1318432,
       "area_km2": 287.9
     },
     "9": {
       "pct": 19.6,
-      "covered_pop": 1379590,
+      "covered_pop": 1379715,
       "area_km2": 316.8
     },
     "10": {
       "pct": 20.4,
-      "covered_pop": 1434006,
+      "covered_pop": 1434088,
       "area_km2": 344.7
     }
   }

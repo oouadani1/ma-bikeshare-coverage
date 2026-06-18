@@ -22,8 +22,8 @@ WGS84   = 'EPSG:4326'    # Geographic lat/lon — source data + KeplerGL output
 # ── Census vintage ─────────────────────────────────────────────────────────────
 # Bump ACS_YEAR when a newer 5-year estimate is available.
 # Also update TIGER_URL to the matching shapefile year.
-ACS_YEAR        = 2022
-TIGER_URL       = 'https://www2.census.gov/geo/tiger/GENZ2022/shp/cb_2022_25_bg_500k.zip'
+ACS_YEAR        = 2023
+TIGER_URL       = 'https://www2.census.gov/geo/tiger/GENZ2023/shp/cb_2023_25_bg_500k.zip'
 
 # Population data source:
 #   'census_reporter' — free, no key, uses Census Reporter API (default)
