@@ -71,11 +71,14 @@ SYSTEM_LABELS = {
 # ── Processed data cache paths ─────────────────────────────────────────────────
 # These files are written on first run and re-used on subsequent runs.
 # Delete them to force a refresh from source (e.g. after updating raw data).
+MAPBOX_TOKEN            = os.environ.get('MAPBOX_TOKEN', '')
+
 CACHE_BLOCK_GROUPS      = 'data/processed/ma_block_groups.geojson'
 CACHE_STATIONS          = 'data/processed/stations_combined.geojson'
 CACHE_BUFFER            = 'data/processed/coverage_buffer.geojson'
 CACHE_BG_COVERAGE       = 'data/processed/block_groups_with_coverage.geojson'
 CACHE_MULTI_BUFFER      = 'data/processed/multi_buffer_coverage.json'
+CACHE_AGE50             = 'data/processed/ma_bg_age50.csv'
 
 # ── Output paths ───────────────────────────────────────────────────────────────
 OUT_MAP_HTML    = 'data/processed/bikeshare_coverage_map.html'

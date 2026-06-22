@@ -2,7 +2,8 @@
 
 **How many Massachusetts residents live within a 10-minute walk of a docked bikeshare station?**
 
-This project answers that question for a Massachusetts DOT report. It maps all five docked bikeshare systems operating in MA, draws a walkable service area around each station, and estimates how many residents fall within it using Census population data.
+This micro visualization project answers this question posed by the Lab @ MassDOT, seeking to understand how many Massachusetts residents are within a reasonable walking distance to a bikeshare station. The resulting map visualizes all five docked bikeshare systems operating in Massachusetts, draws a 10 minute walkingshed around each station, and estimates how many residents fall within it using most recent 2023 American Community Survey Census population data. This inquiry is helpful as a preliminary analysis of mobility equity in Massachusetts because it brings independent bikeshare data into a single source, uses most recent operator data (as of June 22, 2026), and reveals state-wide bikeshare gaps.
+
 
 **[View the interactive map →](https://oouadani1.github.io/ma-bikeshare-coverage/data/processed/bikeshare_coverage_map.html)**
 
@@ -47,7 +48,7 @@ This project answers that question for a Massachusetts DOT report. It maps all f
 
 ---
 
-## Limitations
+## Limitations & Assumptions
 
 - **Straight-line distances overestimate real walkability.** An 800m radius assumes you can walk in a straight line to a station. In practice, streets, buildings, and other barriers make the actual walking route longer. A street-network walkshed analysis (using real route distances) would produce a smaller, more accurate coverage area. This is planned as a next step.
 
