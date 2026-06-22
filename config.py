@@ -78,6 +78,7 @@ CACHE_STATIONS          = 'data/processed/stations_combined.geojson'
 CACHE_BUFFER            = 'data/processed/coverage_buffer.geojson'
 CACHE_BG_COVERAGE       = 'data/processed/block_groups_with_coverage.geojson'
 CACHE_MULTI_BUFFER      = 'data/processed/multi_buffer_coverage.json'
+CACHE_MULTI_AGE50       = 'data/processed/multi_buffer_age50.json'
 CACHE_AGE50             = 'data/processed/ma_bg_age50.csv'
 
 # ── Output paths ───────────────────────────────────────────────────────────────

@@ -1,0 +1,42 @@
+{
+  "1": {
+    "pct": 0.9,
+    "covered_pop": 19067
+  },
+  "2": {
+    "pct": 3.1,
+    "covered_pop": 68317
+  },
+  "3": {
+    "pct": 5.8,
+    "covered_pop": 128068
+  },
+  "4": {
+    "pct": 8.3,
+    "covered_pop": 182727
+  },
+  "5": {
+    "pct": 10.3,
+    "covered_pop": 227154
+  },
+  "6": {
+    "pct": 11.7,
+    "covered_pop": 259696
+  },
+  "7": {
+    "pct": 12.8,
+    "covered_pop": 283534
+  },
+  "8": {
+    "pct": 13.7,
+    "covered_pop": 302942
+  },
+  "9": {
+    "pct": 14.5,
+    "covered_pop": 320187
+  },
+  "10": {
+    "pct": 15.2,
+    "covered_pop": 335749
+  }
+}
