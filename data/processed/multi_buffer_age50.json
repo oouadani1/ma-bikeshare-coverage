@@ -1,42 +1,42 @@
 {
   "1": {
     "pct": 0.9,
-    "covered_pop": 19214
+    "covered_pop": 19212
   },
   "2": {
     "pct": 3.1,
-    "covered_pop": 68803
+    "covered_pop": 68796
   },
   "3": {
     "pct": 5.8,
-    "covered_pop": 128891
+    "covered_pop": 128875
   },
   "4": {
     "pct": 8.3,
-    "covered_pop": 183808
+    "covered_pop": 183776
   },
   "5": {
     "pct": 10.3,
-    "covered_pop": 228447
+    "covered_pop": 228394
   },
   "6": {
     "pct": 11.8,
-    "covered_pop": 261156
+    "covered_pop": 261080
   },
   "7": {
     "pct": 12.9,
-    "covered_pop": 285106
+    "covered_pop": 285004
   },
   "8": {
     "pct": 13.8,
-    "covered_pop": 304602
+    "covered_pop": 304469
   },
   "9": {
     "pct": 14.5,
-    "covered_pop": 321925
+    "covered_pop": 321758
   },
   "10": {
     "pct": 15.2,
-    "covered_pop": 337569
+    "covered_pop": 337364
   }
 }
