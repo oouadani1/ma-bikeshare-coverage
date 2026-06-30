@@ -58,6 +58,7 @@ SYSTEM_COLORS = {
     'metromobility':  '#D32F2F',  # MetroMobility red
     'minuteman':      '#003087',  # Minuteman Bikeshare navy blue
     'coast':          '#16A34A',  # Coast Provincetown green
+    'cargob':         '#FFD600',  # CargoB yellow
 }
 
 # ── System display labels ──────────────────────────────────────────────────────
@@ -68,6 +69,7 @@ SYSTEM_LABELS = {
     'metromobility':  'MetroMobility',
     'minuteman':      'Minuteman Bikeshare',
     'coast':          'Coast Provincetown',
+    'cargob':         'CargoB',
 }
 
 # ── Processed data cache paths ─────────────────────────────────────────────────

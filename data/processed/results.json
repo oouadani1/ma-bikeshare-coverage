@@ -1,68 +1,69 @@
 {
   "buffer_meters": 800,
   "acs_year": 2023,
-  "total_stations": 732,
+  "total_stations": 748,
   "station_counts": {
     "bluebikes": 597,
     "valleybike": 70,
     "coast": 37,
     "metromobility": 19,
+    "cargob": 16,
     "port_bikeshare": 5,
     "minuteman": 4
   },
   "total_ma_population": 7044056.0,
-  "covered_population": 1437176.714225486,
+  "covered_population": 1437206.65802651,
   "coverage_pct": 20.4,
   "coverage_area_km2": 369.7,
   "sensitivity_by_minute": {
     "1": {
       "pct": 1.3,
-      "covered_pop": 93228,
-      "area_km2": 14.0
+      "covered_pop": 94815,
+      "area_km2": 14.2
     },
     "2": {
       "pct": 4.7,
-      "covered_pop": 327890,
-      "area_km2": 50.9
+      "covered_pop": 331444,
+      "area_km2": 51.3
     },
     "3": {
-      "pct": 8.5,
-      "covered_pop": 602266,
-      "area_km2": 99.4
+      "pct": 8.6,
+      "covered_pop": 605309,
+      "area_km2": 99.7
     },
     "4": {
       "pct": 12.0,
-      "covered_pop": 842135,
-      "area_km2": 149.1
+      "covered_pop": 843349,
+      "area_km2": 149.2
     },
     "5": {
       "pct": 14.6,
-      "covered_pop": 1025363,
-      "area_km2": 195.6
+      "covered_pop": 1025916,
+      "area_km2": 195.7
     },
     "6": {
       "pct": 16.4,
-      "covered_pop": 1155392,
-      "area_km2": 236.9
+      "covered_pop": 1155656,
+      "area_km2": 237.0
     },
     "7": {
       "pct": 17.7,
-      "covered_pop": 1248759,
-      "area_km2": 273.6
+      "covered_pop": 1248937,
+      "area_km2": 273.7
     },
     "8": {
       "pct": 18.8,
-      "covered_pop": 1321389,
-      "area_km2": 306.9
+      "covered_pop": 1321429,
+      "area_km2": 307.0
     },
     "9": {
       "pct": 19.6,
-      "covered_pop": 1382738,
-      "area_km2": 338.7
+      "covered_pop": 1382772,
+      "area_km2": 338.8
     },
     "10": {
       "pct": 20.4,
-      "covered_pop": 1437176,
+      "covered_pop": 1437206,
       "area_km2": 369.7
     }
   }

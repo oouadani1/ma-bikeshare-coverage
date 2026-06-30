@@ -2,7 +2,7 @@
 
 **How many Massachusetts residents live within a 10-minute walk of a docked bikeshare station?**
 
-This micro visualization project answers this question posed by the Lab @ MassDOT, seeking to understand how many Massachusetts residents are within a reasonable walking distance to a bikeshare station. The resulting map visualizes all six docked bikeshare systems operating in Massachusetts, draws a 10 minute walkingshed around each station, and estimates how many residents fall within it using most recent 2023 American Community Survey Census population data. The map also includes a demographic lens showing coverage for residents aged 50 and older. This inquiry is helpful as a preliminary analysis of mobility equity in Massachusetts because it brings independent bikeshare data into a single source, uses most recent operator data (as of June 2026), and reveals state-wide bikeshare gaps.
+This micro visualization project answers this question posed by the Lab @ MassDOT, seeking to understand how many Massachusetts residents are within a reasonable walking distance to a bikeshare station. The resulting map visualizes all seven bikeshare systems operating in Massachusetts — docked systems plus a small number of fixed-location geofenced systems — draws a 10 minute walkingshed around each station, and estimates how many residents fall within it using most recent 2023 American Community Survey Census population data. The map also includes a demographic lens showing coverage for residents aged 50 and older. This inquiry is helpful as a preliminary analysis of mobility equity in Massachusetts because it brings independent bikeshare data into a single source, uses most recent operator data (as of June 2026), and reveals state-wide bikeshare gaps.
 
 
 **[View the interactive map →](https://oouadani1.github.io/ma-bikeshare-coverage/data/processed/bikeshare_coverage_map.html)**
@@ -13,7 +13,7 @@ This micro visualization project answers this question posed by the Lab @ MassDO
 
 **About 20% of Massachusetts residents — roughly 1.4 million people — live within a 10-minute walk (~800m) of a docked bikeshare station.**
 
-Among residents aged 50 and older, approximately 15% — roughly 338,000 people — live within walking distance of a station.
+Among residents aged 50 and older, approximately 15% — roughly 337,000 people — live within walking distance of a station.
 
 ---
 
@@ -27,8 +27,11 @@ Among residents aged 50 and older, approximately 15% — roughly 338,000 people 
 | MetroMobility | MetroMobility | Greater Boston (Somerville, Cambridge, Boston, Lawrence, Lowell, Worcester, and others) |
 | Minuteman Bikeshare | Minuteman Advisory Group | Concord / Acton area |
 | Coast Provincetown | Coast | Provincetown & North Truro |
+| CargoB | CargoB | Greater Boston (Back Bay, Cambridge, Somerville, Allston/Brighton, Jamaica Plain, Roslindale, Arlington) |
 
 > **Note on dockless systems:** Sandy Pedals (Nantucket Island) is a dockless bike and scooter service and is not included in the coverage count — see Limitations. It is marked on the map for awareness.
+
+> **Note on geofenced systems:** Coast Provincetown and CargoB are not docked systems in the traditional sense — they use geofenced pickup areas or bike parking corrals rather than fixed docks. We treat each mapped area's coordinates as a station location for this analysis, since the pickup zone itself is fixed in place. See Limitations.
 
 ---
 
@@ -60,6 +63,8 @@ Among residents aged 50 and older, approximately 15% — roughly 338,000 people 
 - **Straight-line distances overestimate real walkability.** An 800m radius assumes you can walk in a straight line to a station. In practice, streets, buildings, and other barriers make the actual walking route longer. A street-network walkshed analysis (using real route distances) would produce a smaller, more accurate coverage area. This is planned as a next step.
 
 - **ValleyBike data is pending an update.** The ValleyBike figures are based on 2025 hub data while we wait for a refreshed operator dataset. Some hubs are geofenced "drop zones" rather than traditional fixed docks; these are included in the count, which may slightly overstate docked-station coverage for the Pioneer Valley.
+
+- **Coast Provincetown and CargoB use geofenced areas, not fixed docks.** Neither system uses traditional docking hardware. Coast relies on geofenced parking areas at partner locations; CargoB uses designated bike parking corrals. For this analysis, we treat each mapped area's coordinates as a station location, since the pickup zone itself is fixed in place — this is consistent with how the 800-meter walkshed model works and is considered sufficient for this scale of analysis.
 
 - **Population is assumed to be evenly distributed within each block group.** This is a standard simplification used in spatial analysis. It introduces some error in areas with uneven development patterns (e.g., a dense downtown and a park in the same block group).
 
