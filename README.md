@@ -2,7 +2,7 @@
 
 **How many Massachusetts residents live within a 10-minute walk of a docked bikeshare station?**
 
-This micro visualization project answers this question posed by the Lab @ MassDOT, seeking to understand how many Massachusetts residents are within a reasonable walking distance to a bikeshare station. The resulting map visualizes all five docked bikeshare systems operating in Massachusetts, draws a 10 minute walkingshed around each station, and estimates how many residents fall within it using most recent 2023 American Community Survey Census population data. This inquiry is helpful as a preliminary analysis of mobility equity in Massachusetts because it brings independent bikeshare data into a single source, uses most recent operator data (as of June 22, 2026), and reveals state-wide bikeshare gaps.
+This micro visualization project answers this question posed by the Lab @ MassDOT, seeking to understand how many Massachusetts residents are within a reasonable walking distance to a bikeshare station. The resulting map visualizes all six docked bikeshare systems operating in Massachusetts, draws a 10 minute walkingshed around each station, and estimates how many residents fall within it using most recent 2023 American Community Survey Census population data. The map also includes a demographic lens showing coverage for residents aged 50 and older. This inquiry is helpful as a preliminary analysis of mobility equity in Massachusetts because it brings independent bikeshare data into a single source, uses most recent operator data (as of June 2026), and reveals state-wide bikeshare gaps.
 
 
 **[View the interactive map →](https://oouadani1.github.io/ma-bikeshare-coverage/data/processed/bikeshare_coverage_map.html)**
@@ -12,6 +12,8 @@ This micro visualization project answers this question posed by the Lab @ MassDO
 ## Key Finding
 
 **About 20% of Massachusetts residents — roughly 1.4 million people — live within a 10-minute walk (~800m) of a docked bikeshare station.**
+
+Among residents aged 50 and older, approximately 15% — roughly 338,000 people — live within walking distance of a station.
 
 ---
 
@@ -24,6 +26,9 @@ This micro visualization project answers this question posed by the Lab @ MassDO
 | Port Bikeshare | Tandem Mobility | Newburyport |
 | MetroMobility | MetroMobility | Greater Boston (Somerville, Cambridge, Boston, Lawrence, Lowell, Worcester, and others) |
 | Minuteman Bikeshare | Minuteman Advisory Group | Concord / Acton area |
+| Coast Provincetown | Coast | Provincetown & North Truro |
+
+> **Note on dockless systems:** Sandy Pedals (Nantucket Island) is a dockless bike and scooter service and is not included in the coverage count — see Limitations. It is marked on the map for awareness.
 
 ---
 
@@ -45,6 +50,8 @@ This micro visualization project answers this question posed by the Lab @ MassDO
 - **Station dots** — Individual station locations, colored by system
 - **Background layer** — Census block groups shaded by population density (people per km²)
 - **Info panel** — Summary stats, system legend, and a walking-distance sensitivity slider (1–10 minutes)
+- **Demographic toggle** — Switch between all residents and the age 50+ population to see how bikeshare coverage varies by group; the map recolors and the coverage stat updates accordingly
+- **Nantucket outline** — Marks the Sandy Pedals dockless service area on the map (not included in the coverage count; see Limitations)
 
 ---
 
@@ -59,6 +66,8 @@ This micro visualization project answers this question posed by the Lab @ MassDO
 - **This is a snapshot in time.** Station locations and counts change seasonally and as systems expand. The analysis reflects the station data and population estimates as of mid-2026.
 
 - **Walking speed assumption.** The 10-minute threshold assumes 80 meters per minute (~3 mph). Slower walkers, people with mobility limitations, or routes with hills would have smaller effective service areas.
+
+- **Dockless systems are not counted.** Sandy Pedals, a dockless bike and scooter service on Nantucket Island, is excluded from the coverage analysis because it has no fixed stations and the 800-meter walkshed model does not apply. If the entire island were treated as a single service area, it would add roughly 14,000 year-round residents — less than 0.2 percentage points at the statewide level. It is listed on the map as a resource for bikeshare awareness across the state.
 
 ---
 
