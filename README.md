@@ -62,9 +62,9 @@ Among residents aged 50 and older, approximately 15% — roughly 337,000 people 
 
 - **Straight-line distances overestimate real walkability.** An 800m radius assumes you can walk in a straight line to a station. In practice, streets, buildings, and other barriers make the actual walking route longer. A street-network walkshed analysis (using real route distances) would produce a smaller, more accurate coverage area. This is planned as a next step.
 
-- **ValleyBike data is pending an update.** The ValleyBike figures are based on 2025 hub data while we wait for a refreshed operator dataset. Some hubs are geofenced pickup zones rather than traditional fixed docks; like Coast Provincetown and CargoB, they are included in the analysis because the zone location is fixed in space.
-
 - **Coast Provincetown and CargoB use geofenced areas, not fixed docks.** Neither system uses traditional docking hardware. Coast relies on geofenced parking areas at partner locations; CargoB uses designated bike parking corrals. For this analysis, we treat each mapped area's coordinates as a station location, since the pickup zone itself is fixed in place — this is consistent with how the 800-meter walkshed model works and is considered sufficient for this scale of analysis.
+
+- **ValleyBike data is pending an update.** The ValleyBike figures are based on 2025 hub data while we wait for a refreshed operator dataset. Some hubs are geofenced pickup zones rather than traditional fixed docks; like Coast Provincetown and CargoB, they are included in the analysis because the zone location is fixed in space.
 
 - **Population is assumed to be evenly distributed within each block group.** This is a standard simplification used in spatial analysis. It introduces some error in areas with uneven development patterns (e.g., a dense downtown and a park in the same block group).
 
